@@ -58,7 +58,6 @@ body {
   background: $color-blue-gradient;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
   overflow: hidden;
 }
 
@@ -75,6 +74,8 @@ body {
   opacity: 0;
   display: flex;
   transition: 0.4s ease all;
+  height: 100vh;
+  overflow: hidden;
 
   @media (min-width: $break-tb + 1) {
     height: 100vh;
