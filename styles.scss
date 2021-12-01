@@ -107,10 +107,10 @@ body {
       .section-inner {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         justify-content: flex-end;
-        align-content: center;
         height: 80vh;
+        margin: auto;
+        max-width: $break-sp;
       }
 
       p {

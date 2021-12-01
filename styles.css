@@ -60,10 +60,10 @@ body {
       .container.container-error .error-message .section-inner {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         justify-content: flex-end;
-        align-content: center;
-        height: 80vh; }
+        height: 80vh;
+        margin: auto;
+        max-width: 480px; }
       .container.container-error .error-message p {
         font-size: 4rem;
         font-family: "Gotham-Medium";
