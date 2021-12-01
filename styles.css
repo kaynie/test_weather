@@ -117,14 +117,14 @@ body {
   .weather-data i {
     font-size: 24rem;
     color: #ffffff;
-    padding: 10% 0;
+    padding: 0.2em 0;
     display: block !important;
     text-align: center;
     margin: auto;
     max-width: 480px; }
     @media (max-width: 768px) {
       .weather-data i {
-        padding: 5% 0 7%;
+        padding: 0.648em 0 0.2em;
         margin: inherit;
         max-width: 320px; } }
   .weather-data h1 {

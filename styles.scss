@@ -183,14 +183,14 @@ body {
   i {
     font-size: $font-size-icon;
     color: $color-white;
-    padding: 10% 0;
+    padding: $base-margin / 9 0;
     display: block !important;
     text-align: center;
     margin: auto;
     max-width: $break-sp;
 
     @media (max-width: $break-tb) {
-      padding: 5% 0 7%;
+      padding: $base-margin * 0.36 0 $base-margin / 9;
       margin: inherit;
       max-width: $break-sp-sm;
     } 
