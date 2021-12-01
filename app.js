@@ -51,12 +51,14 @@ function success(position) {
 
   const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${api}`;
 
+  console.log(base);
+
   fetch(base)
     .then((response) => {
       return response.json();
     })
     .then((data) => {
-      const temp = data.main.temp;
+      const { temp, feels_like } = data.main;
       const place = data.name;
       //use ID instead of icon image ID for icon library classes
       const { description, id } = data.weather[0];
@@ -71,7 +73,7 @@ function success(position) {
       //show place
       loc.textContent = `${place}`;
       //description of weather
-      desc.textContent = `${description}`;
+      desc.textContent = `Feels like ${feels_like.toFixed(0)}˚, ${description}.`;
       //show temp in F (AI file had no other descriptors)
       temperature.textContent = `${temp.toFixed(0)}`;
 

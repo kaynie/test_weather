@@ -85,6 +85,10 @@ body {
 
 .location-data {
   padding: 12em 4em 6em 6em;
+  background-image: url("images/pattern.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
   background-color: black; }
   @media (min-width: 768px) {
     .location-data {
@@ -116,7 +120,8 @@ body {
     padding: 10% 0;
     display: block !important;
     text-align: center;
-    max-width: 320px; }
+    margin: auto;
+    max-width: 480px; }
     @media (max-width: 768px) {
       .weather-data i {
         padding: 5% 0; } }
