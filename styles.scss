@@ -142,7 +142,7 @@ body {
 
 
 .location-data {
-  padding: $base-margin * 6 $base-margin * 2 $base-margin * 3 $base-margin * 3;
+  padding: $base-margin * 10 $base-margin * 2 $base-margin * 3 $base-margin * 3;
   background-image: url('images/pattern.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -151,6 +151,7 @@ body {
 
   @media (min-width: $break-tb) {
     min-width: $break-sp-sm;
+    padding-top: $base-margin * 6;
   }
 
   h1 {
@@ -190,7 +191,7 @@ body {
     max-width: $break-sp;
 
     @media (max-width: $break-tb) {
-      padding: $base-margin * 0.36 0 $base-margin / 9;
+      padding: $base-margin - 1.3 0 $base-margin / 9;
       margin: inherit;
       max-width: $break-sp-sm;
     } 
@@ -216,6 +217,7 @@ body {
   p {
     font-size: $font-desc;
     color: $color-text-transparent;
+    line-height: 1.5;
   }
 }
 

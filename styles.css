@@ -84,7 +84,7 @@ body {
           background-color: white; }
 
 .location-data {
-  padding: 10.8em 3.6em 5.4em 5.4em;
+  padding: 18em 3.6em 5.4em 5.4em;
   background-image: url("images/pattern.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -92,7 +92,8 @@ body {
   background-color: black; }
   @media (min-width: 768px) {
     .location-data {
-      min-width: 320px; } }
+      min-width: 320px;
+      padding-top: 10.8em; } }
   .location-data h1 {
     font-size: 5rem;
     color: #33b1ff;
@@ -124,7 +125,7 @@ body {
     max-width: 480px; }
     @media (max-width: 768px) {
       .weather-data i {
-        padding: 0.648em 0 0.2em;
+        padding: 0.5em 0 0.2em;
         margin: inherit;
         max-width: 320px; } }
   .weather-data h1 {
@@ -139,7 +140,8 @@ body {
       font-size: 6.1875rem; }
   .weather-data p {
     font-size: 3.75rem;
-    color: rgba(255, 255, 255, 0.6); }
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5; }
 
 @keyframes flickerAnimation {
   0% {
