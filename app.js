@@ -46,12 +46,8 @@ let options = {
 };
 
 function success(position) {
-  let long;
-  let lat;
-
-  // store long and lat
-  long = position.coords.longitude;
-  lat = position.coords.latitude;
+  let long = position.coords.longitude;
+  let lat = position.coords.latitude;
 
   const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${api}`;
 
@@ -78,13 +74,15 @@ function success(position) {
       desc.textContent = `${description}`;
       //show temp in F (AI file had no other descriptors)
       temperature.textContent = `${temp.toFixed(0)}`;
-    });
 
-  //undo opacity if it all works
-  document.querySelector('.container').setAttribute('style', 'opacity: 100%');
+      //undo opacity if it all works
+      document.querySelector('.loading').setAttribute('style', 'display: none');
+      document.querySelector('.container').setAttribute('style', 'opacity: 100%');
+    });
 }
 
 function error(err) {
+  document.querySelector('.loading').setAttribute('style', 'display: none');
   document.querySelector('.container').setAttribute('style', 'display: none');
   document.querySelector('.container-error').setAttribute('style', 'opacity: 100%; display: block');
 }

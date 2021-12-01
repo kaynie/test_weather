@@ -9,6 +9,7 @@
   src: url(fonts/GothamMedium.ttf) format('truetype');
 }
 
+
 // variables 
 $base-margin: 2em;
 
@@ -57,12 +58,23 @@ body {
   background: $color-blue-gradient;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh
+  height: 100vh;
+  overflow: hidden;
+}
+
+.loading {
+  color: $color-white;
+  font-size: $font-size-base;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container {
   opacity: 0;
   display: flex;
+  transition: 0.4s ease all;
 
   @media (min-width: $break-tb + 1) {
     height: 100vh;
@@ -171,6 +183,10 @@ body {
     display: block !important;
     text-align: center;
     max-width: $break-sp-sm;
+
+    @media (max-width: $break-tb) {
+      padding: 5% 0;
+    } 
   }
 
   h1 {
@@ -194,4 +210,33 @@ body {
     font-size: $font-desc;
     color: $color-text-transparent;
   }
+}
+
+// flicker animation
+@keyframes flickerAnimation {
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+
+.animate-flicker {
+  -webkit-animation: flickerAnimation 1s infinite;
+  -moz-animation: flickerAnimation 1s infinite;
+  -o-animation: flickerAnimation 1s infinite;
+  animation: flickerAnimation 1s infinite;
 }
