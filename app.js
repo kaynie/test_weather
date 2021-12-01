@@ -96,7 +96,7 @@ if(!navigator.geolocation) {
 // mobile browser
 // close tab -> close app -> reopen app and open same tab bug
 window.addEventListener("load",function() {
-  setTimeout(function(){
-    window.scrollTo(0, 1);
-  }, 0);
+  if(window.pageYOffset > 0) {
+    window.scrollTo(0,0);
+  }
 });
