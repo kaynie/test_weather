@@ -79,6 +79,8 @@ function success(position) {
       document.querySelector('.container').setAttribute('style', 'opacity: 100%');
       
       // mobile safari bug fix
+      // bug happens at open / reopening app with already open tabs 
+      // tabs in back reload not at the top
       window.scrollTo(0,0);
     });
 }
