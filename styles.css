@@ -92,7 +92,7 @@ body {
   background-color: black; }
   @media (min-width: 768px) {
     .location-data {
-      min-width: 320px; } }
+      min-width: 480px; } }
   .location-data h1 {
     font-size: 5rem;
     color: #33b1ff;
@@ -112,7 +112,7 @@ body {
       align-content: stretch;
       align-items: flex-start;
       width: 100%;
-      max-width: 320px;
+      max-width: 480px;
       padding: 12em 8em; } }
   .weather-data i {
     font-size: 24rem;

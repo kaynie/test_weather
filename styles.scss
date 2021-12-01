@@ -150,7 +150,7 @@ body {
   background-color: black;
 
   @media (min-width: $break-tb) {
-    min-width: $break-sp-sm;
+    min-width: $break-sp;
   }
 
   h1 {
@@ -176,7 +176,7 @@ body {
     align-content: stretch;
     align-items: flex-start;
     width: 100%;
-    max-width: $break-sp-sm;
+    max-width: $break-sp;
     padding: $base-margin * 6 $base-margin * 4;
   }
 
