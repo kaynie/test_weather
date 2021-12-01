@@ -8,7 +8,6 @@ const temperature = document.querySelector('.temp');
 const desc = document.querySelector('.desc');
 const dayWeekMonth = document.querySelector('.day-week-month');
 const timeNow = document.querySelector('.time-now');
-const status = document.querySelector('.loading-status');
 
 // date time area
 // looking for a cleaner method for this, locale date string does not take periods and ordering
@@ -50,8 +49,6 @@ function success(position) {
   let lat = position.coords.latitude;
 
   const base = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&appid=${api}`;
-
-  console.log(base);
 
   fetch(base)
     .then((response) => {
