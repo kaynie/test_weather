@@ -92,3 +92,11 @@ if(!navigator.geolocation) {
 } else {
   navigator.geolocation.getCurrentPosition(success, error, options);
 }
+
+// mobile browser
+// close tab -> close app -> reopen app and open same tab bug
+window.addEventListener("load",function() {
+  setTimeout(function(){
+    window.scrollTo(0, 1);
+  }, 0);
+});
