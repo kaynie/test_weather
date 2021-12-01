@@ -74,11 +74,10 @@ body {
   opacity: 0;
   display: flex;
   transition: 0.4s ease all;
-  height: 100vh;
   overflow: hidden;
+  min-height: 100vh;
 
   @media (min-width: $break-tb + 1) {
-    height: 100vh;
     flex-wrap: nowrap;
     flex-direction: row;
     align-items: stretch;
@@ -87,8 +86,6 @@ body {
   
   @media (max-width: $break-tb) {
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: flex-start;
     align-items: stretch;
   }
 

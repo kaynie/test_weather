@@ -32,11 +32,10 @@ body {
   opacity: 0;
   display: flex;
   transition: 0.4s ease all;
-  height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  min-height: 100vh; }
   @media (min-width: 769px) {
     .container {
-      height: 100vh;
       flex-wrap: nowrap;
       flex-direction: row;
       align-items: stretch;
@@ -44,8 +43,6 @@ body {
   @media (max-width: 768px) {
     .container {
       flex-direction: column;
-      flex-wrap: wrap;
-      justify-content: flex-start;
       align-items: stretch; } }
   .container.container-error {
     transition: 0.4s ease all;

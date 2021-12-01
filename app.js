@@ -76,7 +76,7 @@ function success(position) {
 
       //undo opacity if it all works
       document.querySelector('.loading').setAttribute('style', 'display: none');
-      document.querySelector('.container').setAttribute('style', 'opacity: 100%');
+      document.querySelector('.container').setAttribute('style', 'height: 100vh; opacity: 100%');
     });
 }
 
