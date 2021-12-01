@@ -59,6 +59,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
+  height: 100vh;
 }
 
 .loading {
@@ -75,7 +76,7 @@ body {
   display: flex;
   transition: 0.4s ease all;
   overflow: hidden;
-  min-height: 100vh;
+  height: 100vh;
 
   @media (min-width: $break-tb + 1) {
     flex-wrap: nowrap;
