@@ -12,7 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Gotham-Black";
-  font-size: 6px; }
+  font-size: 5px; }
 
 body {
   background: linear-gradient(70deg, #1192e8 0%, #604fc9 80%);
@@ -55,7 +55,7 @@ body {
     .container.container-error .error-message {
       background-color: rgba(255, 255, 255, 0.6);
       color: #000000;
-      padding: 3em;
+      padding: 2.7em;
       height: 100vh; }
       .container.container-error .error-message .section-inner {
         display: flex;
@@ -71,7 +71,7 @@ body {
         line-height: 1.6; }
       .container.container-error .error-message button {
         font-size: 3rem;
-        padding: 2em 4em;
+        padding: 1.8em 3.6em;
         border: 1px solid #ffffff;
         background: rgba(255, 255, 255, 0.6);
         color: #33b1ff;
@@ -84,7 +84,7 @@ body {
           background-color: white; }
 
 .location-data {
-  padding: 12em 4em 6em 6em;
+  padding: 10.8em 3.6em 5.4em 5.4em;
   background-image: url("images/pattern.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,7 +103,7 @@ body {
     font-family: "Gotham-Medium"; }
 
 .weather-data {
-  padding: 6em; }
+  padding: 5.4em; }
   @media (min-width: 768px) {
     .weather-data {
       display: flex;
@@ -113,7 +113,7 @@ body {
       align-items: flex-start;
       width: 100%;
       max-width: 480px;
-      padding: 12em 8em; } }
+      padding: 10.8em 7.2em; } }
   .weather-data i {
     font-size: 24rem;
     color: #ffffff;
