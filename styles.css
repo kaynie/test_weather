@@ -92,7 +92,7 @@ body {
   background-color: black; }
   @media (min-width: 768px) {
     .location-data {
-      min-width: 480px; } }
+      min-width: 320px; } }
   .location-data h1 {
     font-size: 5rem;
     color: #33b1ff;
@@ -124,7 +124,9 @@ body {
     max-width: 480px; }
     @media (max-width: 768px) {
       .weather-data i {
-        padding: 5% 0; } }
+        padding: 5% 0 7%;
+        margin: inherit;
+        max-width: 320px; } }
   .weather-data h1 {
     font-size: 7.18rem;
     color: #ffffff; }

@@ -150,7 +150,7 @@ body {
   background-color: black;
 
   @media (min-width: $break-tb) {
-    min-width: $break-sp;
+    min-width: $break-sp-sm;
   }
 
   h1 {
@@ -190,7 +190,9 @@ body {
     max-width: $break-sp;
 
     @media (max-width: $break-tb) {
-      padding: 5% 0;
+      padding: 5% 0 7%;
+      margin: inherit;
+      max-width: $break-sp-sm;
     } 
   }
 

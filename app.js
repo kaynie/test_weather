@@ -17,7 +17,7 @@ const status = document.querySelector('.loading-status');
 let today = new Date(Date.now());
 let dateDay = new Intl.DateTimeFormat('en', { weekday: 'long' }).format(today);
 let dateMonth = new Intl.DateTimeFormat('en', { month: 'short' }).format(today);
-let dateSelf= new Intl.DateTimeFormat('en', { day: '2-digit' }).format(today);
+let dateSelf= new Intl.DateTimeFormat('en', { day: 'numeric' }).format(today);
 let timeSelf= new Intl.DateTimeFormat('en', { hour: 'numeric', minute: 'numeric' }).format(today).toLowerCase();
 
 const ordinal = (number) => {
