@@ -77,6 +77,9 @@ function success(position) {
       //undo opacity if it all works
       document.querySelector('.loading').setAttribute('style', 'display: none');
       document.querySelector('.container').setAttribute('style', 'opacity: 100%');
+      
+      // mobile safari bug fix
+      window.scrollTo(0,0);
     });
 }
 
