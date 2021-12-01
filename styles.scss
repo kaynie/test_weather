@@ -1,0 +1,197 @@
+// font face
+@font-face {
+  font-family: 'Gotham-Black';//all UI elements but one uses only this font
+  src: url(fonts/Gotham-Black.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Gotham-Medium';//one point usage 
+  src: url(fonts/GothamMedium.ttf) format('truetype');
+}
+
+// variables 
+$base-margin: 2em;
+
+// font sizes based on illustrator values
+$font-size-base: 4rem;
+$font-location: 5rem;//80px / 16
+$font-date: 4.0625rem;//65px / 16
+$font-time: 7.18rem;//115px / 16
+$font-deg: 5.625rem;//90px / 16
+$font-desc: 3.75rem;//60px / 16
+$font-size-icon: 24rem;
+
+// imported font families
+$font-family: 'Gotham-Black';
+$font-family-light: 'Gotham-Medium';
+
+// base colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-blue: #33b1ff;
+$color-purple: #604fc9;
+$color-blue-light: #1192e8;
+//BG color might change later so keep transparency using RGBA instead of hex
+$color-text-transparent: rgba(255,255,255,0.6);
+//BG gradient based on AI file
+$color-blue-gradient: linear-gradient(70deg, $color-blue-light 0%, $color-purple 80%); 
+
+
+// breakpoints
+$break-sp-sm: 320px;//smallest phones?
+$break-sp: 480px;//standard phone
+$break-tb: 768px;//tablet
+$break-pc: 1024px;
+$break-lg: 1200px;
+
+// css reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: 6px;
+}
+
+body {
+  background: $color-blue-gradient;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh
+}
+
+.container {
+  opacity: 0;
+  display: flex;
+
+  @media (min-width: $break-tb + 1) {
+    height: 100vh;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+  
+  @media (max-width: $break-tb) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  &.container-error {
+    transition: 0.4s ease all;
+    opacity: 0;
+    display: none;
+    background: $color-blue-gradient;
+    background-color: $color-blue-light;
+
+    .error-message {
+      background-color: $color-text-transparent;
+      color: $color-black;
+      padding: $base-margin * 1.5;
+      height: 100vh;
+
+      .section-inner {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: center;
+        height: 80vh;
+      }
+
+      p {
+        font-size: $font-size-base;
+        font-family: $font-family-light;
+        margin: auto;
+        line-height: 1.6;
+      }
+
+      button {
+        font-size: $font-size-base - 1;
+        padding: $base-margin $base-margin * 2;
+        border: 1px solid $color-white;
+        background: $color-text-transparent;
+        color: $color-blue;
+        text-align: center;
+        display: block;
+        margin: auto;
+        transition: 0.4s ease all;
+
+        &:hover {
+          cursor: pointer;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+
+.location-data {
+  padding: $base-margin * 6 $base-margin * 2 $base-margin * 3 $base-margin * 3;
+  background-color: black;
+
+  @media (min-width: $break-tb) {
+    min-width: $break-sp-sm;
+  }
+
+  h1 {
+    font-size: $font-location;
+    color: $color-blue;
+    line-height: 1.8;
+  }
+
+  h2, span {
+    font-size: $font-date;
+    color: $color-white;
+    font-family: $font-family-light;
+  }
+}
+
+.weather-data {
+  padding: $base-margin * 3;
+
+  @media (min-width: $break-tb) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    align-items: flex-start;
+    width: 100%;
+    max-width: $break-sp-sm;
+    padding: $base-margin * 6 $base-margin * 4;
+  }
+
+  i {
+    font-size: $font-size-icon;
+    color: $color-white;
+    padding: 10% 0;
+    display: block !important;
+    text-align: center;
+    max-width: $break-sp-sm;
+  }
+
+  h1 {
+    font-size: $font-time;
+    color: $color-white;
+  }
+
+  h2 {
+    font-size: $font-deg;
+    color: $color-white;
+    line-height: 1.8;
+
+    &::after {
+      content: '˚';
+      font-size: $font-deg * 1.1;
+
+    }
+  }
+
+  p {
+    font-size: $font-desc;
+    color: $color-text-transparent;
+  }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/weather-icons.css" />
+
+  <meta name="description" content="Giving you hourly weather">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <article class="container">
+    <section class="location-data">
+      <div class="section-inner">
+        <h1 id="location">Greenwich</h1>
+        <h2><span class="day-week-month">Weekday, Mon. Date</span></h2>
+      </div>
+    </section>
+
+    <section class="weather-data">
+      <div class="section-inner">
+        <h1 class="time-now">Time</h1>
+        <i id="weather-icon" class="wi"></i>
+        <h2 class="temp">72</h2>
+        <p class="desc">Description of current weather</p>
+      </div>
+    </section>
+  </article>
+
+  <article class="container container-error">
+    <section class="error-message">
+      <div class="section-inner">
+        <p>This page does not work without your location.
+        <br>
+        Please reload the page and allow us to track your location.</p>
+
+        <button onClick="window.location.reload();">Reload Page</button>
+      </div>
+    </section>
+  </article>
+  <script src="app.js"></script>
+</body>
+</html>

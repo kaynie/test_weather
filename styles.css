@@ -1,0 +1,122 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Gotham-Black';
+  src: url(fonts/Gotham-Black.ttf) format("truetype"); }
+
+@font-face {
+  font-family: 'Gotham-Medium';
+  src: url(fonts/GothamMedium.ttf) format("truetype"); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham-Black";
+  font-size: 6px; }
+
+body {
+  background: linear-gradient(70deg, #1192e8 0%, #604fc9 80%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; }
+
+.container {
+  opacity: 0;
+  display: flex; }
+  @media (min-width: 769px) {
+    .container {
+      height: 100vh;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: flex-start; } }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: stretch; } }
+  .container.container-error {
+    transition: 0.4s ease all;
+    opacity: 0;
+    display: none;
+    background: linear-gradient(70deg, #1192e8 0%, #604fc9 80%);
+    background-color: #1192e8; }
+    .container.container-error .error-message {
+      background-color: rgba(255, 255, 255, 0.6);
+      color: #000000;
+      padding: 3em;
+      height: 100vh; }
+      .container.container-error .error-message .section-inner {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-content: center;
+        height: 80vh; }
+      .container.container-error .error-message p {
+        font-size: 4rem;
+        font-family: "Gotham-Medium";
+        margin: auto;
+        line-height: 1.6; }
+      .container.container-error .error-message button {
+        font-size: 3rem;
+        padding: 2em 4em;
+        border: 1px solid #ffffff;
+        background: rgba(255, 255, 255, 0.6);
+        color: #33b1ff;
+        text-align: center;
+        display: block;
+        margin: auto;
+        transition: 0.4s ease all; }
+        .container.container-error .error-message button:hover {
+          cursor: pointer;
+          background-color: white; }
+
+.location-data {
+  padding: 12em 4em 6em 6em;
+  background-color: black; }
+  @media (min-width: 768px) {
+    .location-data {
+      min-width: 320px; } }
+  .location-data h1 {
+    font-size: 5rem;
+    color: #33b1ff;
+    line-height: 1.8; }
+  .location-data h2, .location-data span {
+    font-size: 4.0625rem;
+    color: #ffffff;
+    font-family: "Gotham-Medium"; }
+
+.weather-data {
+  padding: 6em; }
+  @media (min-width: 768px) {
+    .weather-data {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: stretch;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 320px;
+      padding: 12em 8em; } }
+  .weather-data i {
+    font-size: 24rem;
+    color: #ffffff;
+    padding: 10% 0;
+    display: block !important;
+    text-align: center;
+    max-width: 320px; }
+  .weather-data h1 {
+    font-size: 7.18rem;
+    color: #ffffff; }
+  .weather-data h2 {
+    font-size: 5.625rem;
+    color: #ffffff;
+    line-height: 1.8; }
+    .weather-data h2::after {
+      content: '˚';
+      font-size: 6.1875rem; }
+  .weather-data p {
+    font-size: 3.75rem;
+    color: rgba(255, 255, 255, 0.6); }
